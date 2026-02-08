@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thai Interpreter"
+  short_description: "Thai-to-English translation with execution mode and UTF-8 safety."
+  default_prompt: "Use $thai-interpreter in Literal Translation or Execution Translation mode to convert my Thai prompt into English and protect Thai text encoding in file outputs."
