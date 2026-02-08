@@ -16,7 +16,7 @@ Use this mode selector first:
 2. `Execution Translation`:
    - Translate Thai to compact, execution-ready English.
    - Optimize for fewer tokens and direct agent action.
-   - Use structured output with strict brevity.
+   - Keep wording concise; do not force a fixed response template.
 
 Default to `Execution Translation` unless the user asks for direct/literal translation.
 
@@ -32,11 +32,7 @@ Use this workflow:
 
 Apply these rules for `Execution Translation`:
 
-1. Convert long Thai narrative into a compact structure:
-   - `Goal`
-   - `Inputs`
-   - `Constraints`
-   - `Output`
+1. Convert long Thai narrative into concise, actionable instructions.
 2. Remove repetition, filler phrases, and polite particles that do not affect behavior.
 3. Preserve non-negotiable requirements exactly as written.
 4. Keep dates, numbers, IDs, file paths, and code literals unchanged.
@@ -74,12 +70,8 @@ For automated checks and safe writes, use:
 
 When handling Thai requests, produce:
 
-1. A mode label: `Literal Translation` or `Execution Translation`.
-2. English translation in the selected mode.
-3. If mode is `Execution Translation`, include structured block:
-   - `Goal`
-   - `Inputs`
-   - `Constraints`
-   - `Output`
+1. English translation in the selected mode.
+2. Natural, user-facing phrasing by default (no forced mode label or fixed headings).
+3. Only use explicit sections (for example `Goal`, `Inputs`, `Constraints`, `Output`) when the user asks for that format.
 4. The implementation result (if execution is requested).
 5. A brief encoding safety confirmation when files were changed.

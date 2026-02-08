@@ -26,7 +26,7 @@ Use when the user wants efficient agent execution and lower token usage.
 
 ## Compression Template
 
-Use this exact structure:
+Default to concise natural phrasing. Use this structure only when the user explicitly asks for a structured template:
 
 ```
 Goal: <one sentence>
